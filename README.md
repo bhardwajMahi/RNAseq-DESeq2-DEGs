@@ -26,5 +26,24 @@ RNAseq-DESeq2-DEGs/
 │   ├── MAplot.png         # MA-plot of log2FC vs mean expression
 │   └── Heatmap.png        # heatmap of top 30 DEGs
 ├── .gitignore             # files/folders to be ignored by git
+
+---
+
+## 📦 Requirements
+
+- R >= 4.0
+- Packages:
+  - `DESeq2`
+  - `airway`
+  - `pheatmap`
+  - `vsn` (optional, for variance-stabilizing transformations)
+
+Install requirements:
+```r
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install(c("DESeq2", "airway", "pheatmap", "vsn"))
+
 ├── LICENSE                # open-source license (MIT)
 └── README.md              # project documentation (this file)
