@@ -1,33 +1,30 @@
 # RNAseq-DESeq2-DEGs
 
 **RNA-seq differential expression analysis using DESeq2**  
-This repository demonstrates a complete small project: data → analysis → results using the Bioconductor `airway` dataset and `DESeq2`. It's ready to run and push to GitHub as a showcase project.
+
+This repository demonstrates a complete mini-project: **data → analysis → results** using the Bioconductor `airway` dataset and the `DESeq2` package in R.  
+It showcases how to identify **differentially expressed genes (DEGs)** and visualize results with plots.  
 
 ---
 
+## 🔬 Project Overview
+- 📊 Input: RNA-seq count data from the **airway** dataset  
+- ⚙️ Method: Differential expression with **DESeq2**  
+- 📑 Output: DEGs table + MA-plot + heatmap  
 
-## What this project does
-1. Loads the `airway` sample RNA-seq dataset (Bioconductor).
-2. Runs the DESeq2 pipeline to find differentially expressed genes (DEGs).
-3. Saves a CSV with results and generates an MA-plot and heatmap (top 30 DEGs).
-
-This is intentionally simple and self-contained so it's easy to reproduce and extend.
+This project is designed to be **self-contained, reproducible, and beginner-friendly**.
 
 ---
 
-## Requirements
-
-- R >= 4.0
-- Packages:
-  - `BiocManager` (to install Bioconductor packages)
-  - `DESeq2`
-  - `airway`
-  - `pheatmap`
-  - `vsn` (optional - used by some plotting functions)
-  
-Install required packages (run in R):
-```r
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-
-BiocManager::install(c("DESeq2", "airway", "pheatmap", "vsn"))
+## 📂 Repository Structure
+```bash
+RNAseq-DESeq2-DEGs/
+├── scripts/               # contains analysis scripts
+│   └── analysis.R         # main DESeq2 analysis pipeline
+├── results/               # outputs generated after running analysis
+│   ├── DEGs.csv           # table of differentially expressed genes
+│   ├── MAplot.png         # MA-plot of log2FC vs mean expression
+│   └── Heatmap.png        # heatmap of top 30 DEGs
+├── .gitignore             # files/folders to be ignored by git
+├── LICENSE                # open-source license (MIT)
+└── README.md              # project documentation (this file)
